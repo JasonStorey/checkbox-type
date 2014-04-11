@@ -3,5 +3,6 @@ if [ ! -d "dist" ]; then
 fi
 
 rm -rf ./dist/*
+cp ./examples/*.html ./dist/
 
 browserify ./src/main.js -o ./dist/checkbox-type.js
