@@ -3,12 +3,14 @@ var Letters = require('./checkbox-letters.js');
 window.CheckboxType = window.CheckboxType || (function($) {
 	return function CheckboxType(selector) {
 
-		var elements = $(selector);
+		var elements = $(selector),
+			cachedText = elements.text();
 
 		(function(){
 			elements.each(function(index){
-				var $this = $(this);
-				var text = $this.text();
+				var $this = $(this),
+					text = $this.text();
+
 				cleanElement($this);
 				drawCheckboxes($this, text);
 			});
@@ -25,7 +27,7 @@ window.CheckboxType = window.CheckboxType || (function($) {
 		}
 
 		function getText() {
-			return elements.text();
+			return cachedText;
 		}
 
 		return {

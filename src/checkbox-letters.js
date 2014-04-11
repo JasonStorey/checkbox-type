@@ -4,8 +4,8 @@ var CheckboxLetters = function(text) {
 	var checkboxes = [],
 		cols = 5,
 		rows = 7,
-		width = 60,
-		height = 70,
+		width = 80,
+		height = 100,
 		resolution = cols * rows;
 
 	for(var i = 0; i < text.length; i++) {
