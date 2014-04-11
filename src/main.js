@@ -1,4 +1,4 @@
-var CharacterCreator = require('./checkbox-letters.js');
+var CharacterCreator = require('./character-creator.js');
 
 window.CheckboxType = window.CheckboxType || (function($) {
 	return function CheckboxType(selector) {
