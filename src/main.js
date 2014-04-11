@@ -1,4 +1,4 @@
-var Letters = require('./checkbox-letters.js');
+var CharacterCreator = require('./checkbox-letters.js');
 
 window.CheckboxType = window.CheckboxType || (function($) {
 	return function CheckboxType(selector) {
@@ -22,7 +22,8 @@ window.CheckboxType = window.CheckboxType || (function($) {
 		}
 
 		function drawCheckboxes(elem, text) {
-			var checkboxes = Letters(text.toUpperCase());
+			var characterCreator = CharacterCreator(text.toUpperCase()),
+				checkboxes = characterCreator.getCheckboxes();
 			elem.append(checkboxes);
 		}
 
