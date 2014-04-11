@@ -34,9 +34,9 @@ var CharacterCreator = function(text) {
 					'float': 'left'
 				});
 
-				if(GLYPHS[character].indexOf(j) !== -1) {
+				if(GLYPHS[character] && GLYPHS[character].indexOf(j) !== -1) {
 					checkbox.attr('checked', true);
-				}			
+				}	
 				characterDiv.append(checkbox);
 			}
 
