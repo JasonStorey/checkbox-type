@@ -16,7 +16,7 @@ window.CheckboxType = window.CheckboxType || (function($) {
 		}
 
 		function drawCheckboxes(elem) {
-			var checkboxes = Letters(text);
+			var checkboxes = Letters(text.toUpperCase());
 			elem.append(checkboxes);
 		}
 
