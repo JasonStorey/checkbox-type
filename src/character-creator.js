@@ -9,18 +9,24 @@ var CharacterCreator = function(text) {
 		resolution = cols * rows;
 
 	(function(){
-		for(var i = 0; i < text.length; i++) {
-			var character = text.charAt(i),
-				characterDiv = $('<div>').css({
-					'width': width + 'px',
-					'height': height + 'px',
-					'padding': 0,
-					'margin': '2px',
-					'float': 'left'
-				});
+		var i,
+			j,
+			character,
+			characterDiv,
+			checkbox;
 
-			for(var j = 0; j < resolution; j++) {
-				var checkbox = $('<input type="checkbox">').css({
+		for(i = 0; i < text.length; i++) {
+			character = text.charAt(i),
+			characterDiv = $('<div>').css({
+				'width': width + 'px',
+				'height': height + 'px',
+				'padding': 0,
+				'margin': '2px',
+				'float': 'left'
+			});
+
+			for(j = 0; j < resolution; j++) {
+				checkbox = $('<input type="checkbox">').css({
 					'width': (width / cols) + 'px',
 					'height': (height / rows) + 'px',
 					'padding': 0,
