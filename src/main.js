@@ -3,25 +3,29 @@ var Letters = require('./checkbox-letters.js');
 window.CheckboxType = window.CheckboxType || (function($) {
 	return function CheckboxType(selector) {
 
-		var element = $(selector),
-			text = element.text();
+		var elements = $(selector);
 
 		(function(){
-			cleanElement(element);
-			drawCheckboxes(element);
+			elements.each(function(index){
+				var $this = $(this);
+				var text = $this.text();
+				cleanElement($this);
+				drawCheckboxes($this, text);
+			});
+			
 		}());
 
 		function cleanElement(elem) {
 			elem.text('');
 		}
 
-		function drawCheckboxes(elem) {
+		function drawCheckboxes(elem, text) {
 			var checkboxes = Letters(text.toUpperCase());
 			elem.append(checkboxes);
 		}
 
 		function getText() {
-			return text;
+			return elements.text();
 		}
 
 		return {
