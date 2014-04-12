@@ -22,7 +22,7 @@ window.CheckboxType = window.CheckboxType || (function($) {
 		}
 
 		function drawCheckboxes(elem, text) {
-			var characterCreator = CharacterCreator(text.toUpperCase()),
+			var characterCreator = CharacterCreator($,text.toUpperCase()),
 				checkboxes = characterCreator.getCheckboxes();
 			elem.append(checkboxes);
 		}
@@ -35,4 +35,4 @@ window.CheckboxType = window.CheckboxType || (function($) {
 			text: getText
 		};
 	};
-}(window.jQuery));
+}(window.checkboxJQuery || window.jQuery));

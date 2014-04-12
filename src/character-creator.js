@@ -1,6 +1,6 @@
 var GLYPHS = require('./glyphs.js');
 
-var CharacterCreator = function(text) {
+var CharacterCreator = function($, text) {
 	var checkboxes = [],
 		cols = 5,
 		rows = 7,
