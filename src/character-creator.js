@@ -6,16 +6,20 @@ var CharacterCreator = function($, text) {
 		rows = 7,
 		width = 80,
 		height = 100,
-		resolution = cols * rows;
+		resolution = cols * rows,
+		dev = false;
 
 	(function(){
 		var i,
 			j,
 			character,
 			characterDiv,
-			checkbox;
+			checkbox,
+			checkboxWidth = (width / cols) + 'px',
+			checkboxHeight = (height / rows) + 'px',
+			textLength = text.length;
 
-		for(i = 0; i < text.length; i++) {
+		for(i = 0; i < textLength; i++) {
 			character = text.charAt(i),
 			characterDiv = $('<div>').css({
 				'width': width + 'px',
@@ -27,8 +31,8 @@ var CharacterCreator = function($, text) {
 
 			for(j = 0; j < resolution; j++) {
 				checkbox = $('<input type="checkbox">').css({
-					'width': (width / cols) + 'px',
-					'height': (height / rows) + 'px',
+					'width': checkboxWidth,
+					'height': checkboxHeight,
 					'padding': 0,
 					'margin': 0,
 					'float': 'left'
@@ -40,12 +44,14 @@ var CharacterCreator = function($, text) {
 				characterDiv.append(checkbox);
 			}
 
-			characterDiv.data('character', character);
-			characterDiv.click(onCharClicked);
+			if(dev) {
+				characterDiv.data('character', character);
+				characterDiv.click(onCharClicked);
+			}
 			checkboxes.push(characterDiv);
 		}
 
-		checkboxes.push($('<div>').css('clear', 'both'));
+		checkboxes.push($('<div style="clear:both;"></div>'));
 	}());
 
 	function onCharClicked(e) {
