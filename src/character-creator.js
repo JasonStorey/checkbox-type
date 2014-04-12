@@ -4,8 +4,8 @@ var CharacterCreator = function($, text) {
 	var checkboxes = [],
 		cols = 5,
 		rows = 7,
-		width = 80,
-		height = 100,
+		width = 50,
+		height = 70,
 		resolution = cols * rows,
 		dev = false;
 
