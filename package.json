@@ -9,6 +9,7 @@
   "author": "",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "browserify": "~3.41.0"
+    "browserify": "~3.41.0",
+    "uglify-js": "^2.4.13"
   }
 }
