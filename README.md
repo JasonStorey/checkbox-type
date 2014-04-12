@@ -14,6 +14,7 @@ How to Build
 You'll need node & npm installed.
 
     git clone git@github.com:JasonStorey/checkbox-type.git
+    cd checkbox-type
     npm install
     npm run build
 
