@@ -24,7 +24,7 @@ How to Use
 -------
 * include a recent jQuery on your page
 * include checkbox-type.js script
-* use *CheckboxType(selector)* to render text as checkbox-type
+* use `CheckboxType(selector)` to render text as checkbox-type
 
 For example...
     
@@ -36,4 +36,4 @@ For example...
 		var h1 = CheckboxType('h1');
 	</script>
     
-Or you can grab the bookmarklet from [this page](http://jasonstorey.co.uk/checkbox/) - drag the bookmarklet to your bookmarks bar and click it on various pages to watch your browser struggle. The bookmarklet currently checkbox-types all *p* elements.
+Or you can grab the bookmarklet from [this page](http://jasonstorey.co.uk/checkbox/) - drag the bookmarklet to your bookmarks bar and click it on various pages to watch your browser struggle. The bookmarklet currently checkbox-types all `<p>` elements.
