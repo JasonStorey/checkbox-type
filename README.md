@@ -1,7 +1,7 @@
 Checkbox Type
 =============
 
-An extremely useful JS library for rendering HTML text using only checkboxes.
+An extremely useful JS library for rendering text using HTML checkboxes.
 
 ![alt text](http://jasonstorey.co.uk/checkbox/checkbox-type.png "Checkbox type screenshot")
 
